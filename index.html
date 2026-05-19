@@ -75,7 +75,7 @@
 
     .hero{
       width:100%;
-      height:100vh;
+      height:520px;
       margin-top:78px;
       position:relative;
       overflow:hidden;
@@ -122,8 +122,8 @@
       left:0;
 
       background:linear-gradient(
-        rgba(15,23,42,0.60),
-        rgba(15,23,42,0.60)
+        rgba(15,23,42,0.55),
+        rgba(15,23,42,0.55)
       );
 
       z-index:1;
@@ -144,10 +144,10 @@
     }
 
     .hero-content h1{
-      font-size:68px;
+      font-size:60px;
       line-height:1.2;
       margin-bottom:20px;
-      max-width:750px;
+      max-width:700px;
     }
 
     .hero-content span{
@@ -156,7 +156,7 @@
 
     .hero-content p{
       font-size:18px;
-      line-height:1.9;
+      line-height:1.8;
       max-width:700px;
       color:#e2e8f0;
     }
@@ -171,6 +171,7 @@
       border-radius:50px;
       font-weight:600;
       transition:0.3s;
+      display:inline-block;
     }
 
     .btn:hover{
@@ -202,54 +203,10 @@
 
     }
 
-    /* ================= PROGRAM ================= */
+    /* ================= SECTION ================= */
 
-    .program-hero{
-      width:100%;
-      height:320px;
-
-      background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400');
-      background-size:cover;
-      background-position:center;
-
-      position:relative;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .program-overlay{
-      width:100%;
-      height:100%;
-
-      position:absolute;
-      top:0;
-      left:0;
-
-      background:rgba(15,23,42,0.70);
-    }
-
-    .program-content{
-      position:relative;
-      z-index:5;
-      text-align:center;
-      color:white;
-    }
-
-    .program-content h1{
-      font-size:58px;
-      margin-bottom:10px;
-    }
-
-    .program-content p{
-      color:#cbd5e1;
-      letter-spacing:2px;
-    }
-
-    .program-section{
+    .section{
       padding:90px 8%;
-      background:#f8fafc;
     }
 
     .section-title{
@@ -267,6 +224,110 @@
       font-size:42px;
       line-height:1.4;
       color:#0f172a;
+    }
+
+    /* ================= CARDS ================= */
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+    }
+
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:24px;
+      border:1px solid #e2e8f0;
+
+      transition:0.3s;
+
+      box-shadow:0 8px 25px rgba(0,0,0,0.04);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+
+      box-shadow:0 15px 35px rgba(20,184,166,0.12);
+    }
+
+    .icon{
+      width:75px;
+      height:75px;
+      background:#ccfbf1;
+      border-radius:50%;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:34px;
+
+      margin-bottom:22px;
+    }
+
+    .card h3{
+      font-size:26px;
+      margin-bottom:16px;
+      color:#0f172a;
+    }
+
+    .card p{
+      color:#475569;
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    /* ================= PROGRAM CONDITIONS ================= */
+
+    .program-page{
+      background:#f8fafc;
+    }
+
+    .program-header{
+      width:100%;
+      height:320px;
+
+      background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400');
+
+      background-size:cover;
+      background-position:center;
+
+      position:relative;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .program-overlay{
+      position:absolute;
+      width:100%;
+      height:100%;
+
+      background:rgba(15,23,42,0.72);
+    }
+
+    .program-title{
+      position:relative;
+      z-index:5;
+
+      text-align:center;
+      color:white;
+    }
+
+    .program-title h1{
+      font-size:58px;
+      margin-bottom:10px;
+    }
+
+    .program-title p{
+      color:#cbd5e1;
+      letter-spacing:2px;
+    }
+
+    .program-section{
+      padding:90px 8%;
     }
 
     .program-container{
@@ -297,6 +358,7 @@
       width:100%;
       height:100%;
       object-fit:cover;
+
       transition:0.5s;
     }
 
@@ -310,11 +372,16 @@
 
     .badge{
       display:inline-block;
+
       background:#14b8a6;
       color:white;
+
       padding:8px 18px;
+
       border-radius:50px;
+
       font-size:13px;
+
       margin-bottom:20px;
     }
 
@@ -373,61 +440,6 @@
       color:#475569;
       line-height:1.8;
       font-size:15px;
-    }
-
-    /* ================= TENTANG ================= */
-
-    .section{
-      padding:90px 8%;
-    }
-
-    .card-container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:28px;
-    }
-
-    .card{
-      background:white;
-      padding:35px;
-      border-radius:24px;
-      border:1px solid #e2e8f0;
-
-      transition:0.3s;
-
-      box-shadow:0 8px 25px rgba(0,0,0,0.04);
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 15px 35px rgba(20,184,166,0.12);
-    }
-
-    .icon{
-      width:75px;
-      height:75px;
-      background:#ccfbf1;
-      border-radius:50%;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      font-size:34px;
-
-      margin-bottom:22px;
-    }
-
-    .card h3{
-      font-size:26px;
-      margin-bottom:16px;
-      color:#0f172a;
-    }
-
-    .card p{
-      color:#475569;
-      line-height:1.8;
-      font-size:16px;
     }
 
     /* ================= TESTIMONI ================= */
@@ -518,47 +530,14 @@
 
     }
 
-    /* ================= HELP ================= */
-
-    .help-section{
-      padding:100px 8%;
-      background:#0f172a;
-      text-align:center;
-      color:white;
-    }
-
-    .help-content h4{
-      color:#5eead4;
-      font-size:22px;
-      margin-bottom:15px;
-    }
-
-    .help-content h2{
-      font-size:48px;
-      line-height:1.4;
-      margin-bottom:20px;
-    }
-
-    .help-content p{
-      max-width:700px;
-      margin:auto;
-      line-height:1.9;
-      color:#cbd5e1;
-      font-size:17px;
-    }
-
-    .help-content .btn{
-      margin:auto;
-      margin-top:35px;
-    }
-
     /* ================= FOOTER ================= */
 
     footer{
-      background:#020617;
+      background:#0f172a;
       color:white;
       text-align:center;
       padding:28px;
+      margin-top:50px;
       font-size:15px;
     }
 
@@ -588,28 +567,45 @@
       }
 
       .hero{
-        height:500px;
+        height:430px;
         margin-top:120px;
       }
 
       .hero-content{
-        padding:50px 7%;
+        justify-content:flex-start;
+        padding:60px 7% 0;
       }
 
       .hero-content h1{
-        font-size:38px;
+        font-size:34px;
       }
 
       .hero-content p{
         font-size:15px;
       }
 
-      .program-content h1{
-        font-size:38px;
+      .section{
+        padding:70px 6%;
+      }
+
+      .section-title h4{
+        font-size:18px;
       }
 
       .section-title h2{
-        font-size:30px;
+        font-size:28px;
+      }
+
+      .program-header{
+        height:250px;
+      }
+
+      .program-title h1{
+        font-size:38px;
+      }
+
+      .program-section{
+        padding:70px 6%;
       }
 
       .program-card{
@@ -617,7 +613,7 @@
       }
 
       .program-image{
-        height:300px;
+        height:280px;
       }
 
       .program-body{
@@ -625,15 +621,11 @@
       }
 
       .program-body h3{
-        font-size:32px;
+        font-size:30px;
       }
 
       .price-box h4{
         font-size:28px;
-      }
-
-      .section{
-        padding:70px 6%;
       }
 
       .testimoni-section{
@@ -646,18 +638,6 @@
 
       .testi-card{
         width:270px;
-      }
-
-      .help-section{
-        padding:70px 6%;
-      }
-
-      .help-content h2{
-        font-size:32px;
-      }
-
-      .help-content p{
-        font-size:15px;
       }
 
     }
@@ -679,7 +659,6 @@
       <li><a href="#home">Beranda</a></li>
       <li><a href="#program">Program Conditions</a></li>
       <li><a href="#tentang">Tentang Kami</a></li>
-      <li><a href="#help">Need Help</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
 
@@ -712,8 +691,8 @@
 
       <p>
         Tempat belajar komputer modern dengan suasana nyaman,
-        fasilitas lengkap, dan pembelajaran yang mudah dipahami
-        untuk semua kalangan.
+        desain elegan, fasilitas lengkap, dan pembelajaran
+        yang mudah dipahami untuk semua kalangan.
       </p>
 
       <a href="#program" class="btn">
@@ -724,96 +703,104 @@
 
   </section>
 
-  <!-- ================= PROGRAM ================= -->
+  <!-- ================= PROGRAM CONDITIONS ================= -->
 
-  <section class="program-hero" id="program">
+  <section class="program-page" id="program">
 
-    <div class="program-overlay"></div>
+    <!-- HEADER PROGRAM -->
 
-    <div class="program-content">
+    <div class="program-header">
 
-      <h1>Program Conditions</h1>
+      <div class="program-overlay"></div>
 
-      <p>LKP SULTHAN COMPUTER</p>
+      <div class="program-title">
 
-    </div>
+        <h1>Program Conditions</h1>
 
-  </section>
+        <p>LKP SULTHAN COMPUTER</p>
 
-  <section class="program-section">
-
-    <div class="section-title">
-
-      <h4>Program Pilihan</h4>
-
-      <h2>
-        Pilih Program Pelatihan <br>
-        Sesuai Minat dan Skill
-      </h2>
+      </div>
 
     </div>
 
-    <div class="program-container">
+    <!-- ISI PROGRAM -->
 
-      <div class="program-card">
+    <div class="program-section">
 
-        <div class="program-image">
+      <div class="section-title">
 
-          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1400">
+        <h4>Program Pilihan</h4>
 
-        </div>
+        <h2>
+          Pilih Program Pelatihan <br>
+          Sesuai Minat dan Skill
+        </h2>
 
-        <div class="program-body">
+      </div>
 
-          <div class="badge">
-            Program Favorit
-          </div>
+      <div class="program-container">
 
-          <h3>Design Grafis</h3>
+        <div class="program-card">
 
-          <p class="program-desc">
-            Mempelajari desain vector dan bitmap untuk kebutuhan
-            branding, sosial media, promosi, percetakan,
-            dan konten visual modern.
-          </p>
+          <div class="program-image">
 
-          <div class="price-box">
-
-            <h4>Rp 800.000</h4>
-
-            <span>16x Pertemuan</span>
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1400">
 
           </div>
 
-          <div class="apps">
+          <div class="program-body">
 
-            <div class="app-card">
+            <div class="badge">
+              Program Favorit
+            </div>
 
-              <h5>CorelDRAW</h5>
+            <h3>Design Grafis</h3>
 
-              <p>
-                Software desain vector untuk membuat logo,
-                banner, ilustrasi, dan desain percetakan.
-              </p>
+            <p class="program-desc">
+              Mempelajari desain vector dan bitmap untuk kebutuhan
+              branding, sosial media, promosi, percetakan,
+              dan konten visual modern.
+            </p>
+
+            <div class="price-box">
+
+              <h4>Rp 800.000</h4>
+
+              <span>16x Pertemuan</span>
 
             </div>
 
-            <div class="app-card">
+            <div class="apps">
 
-              <h5>Adobe Photoshop</h5>
+              <div class="app-card">
 
-              <p>
-                Software editing bitmap untuk manipulasi foto,
-                desain konten visual, dan digital imaging.
-              </p>
+                <h5>CorelDRAW</h5>
+
+                <p>
+                  Software desain vector untuk membuat logo,
+                  banner, ilustrasi, dan desain percetakan.
+                </p>
+
+              </div>
+
+              <div class="app-card">
+
+                <h5>Adobe Photoshop</h5>
+
+                <p>
+                  Software editing bitmap untuk manipulasi foto,
+                  desain konten visual, dan digital imaging.
+                </p>
+
+              </div>
 
             </div>
 
-          </div>
+            <a href="#" class="btn">
+              Daftar Sekarang
+            </a>
 
-          <a href="#" class="btn">
-            Daftar Sekarang
-          </a>
+          </div>
 
         </div>
 
@@ -847,8 +834,8 @@
         <h3>Kurikulum</h3>
 
         <p>
-          Materi pembelajaran modern dan mengikuti
-          perkembangan teknologi terbaru.
+          Materi pembelajaran disusun secara bertahap,
+          modern, dan mengikuti perkembangan teknologi terbaru.
         </p>
 
       </div>
@@ -861,7 +848,7 @@
 
         <p>
           Ruang belajar nyaman dengan komputer lengkap
-          dan suasana belajar yang kondusif.
+          dan lingkungan yang mendukung proses belajar.
         </p>
 
       </div>
@@ -874,7 +861,7 @@
 
         <p>
           Membantu meningkatkan hard skill dan soft skill
-          untuk dunia kerja modern.
+          agar lebih siap menghadapi dunia kerja.
         </p>
 
       </div>
@@ -886,8 +873,8 @@
         <h3>Instruktur</h3>
 
         <p>
-          Dibimbing pengajar berpengalaman dengan metode
-          pembelajaran mudah dipahami.
+          Dibimbing langsung oleh pengajar berpengalaman
+          yang mudah dipahami dalam menyampaikan materi.
         </p>
 
       </div>
@@ -899,8 +886,8 @@
         <h3>Ribuan Alumni</h3>
 
         <p>
-          Banyak alumni berhasil meningkatkan kemampuan
-          dan karir di bidang teknologi.
+          Banyak alumni yang berhasil mengembangkan
+          kemampuan dan karir di bidang teknologi.
         </p>
 
       </div>
@@ -912,8 +899,8 @@
         <h3>Bersertifikat</h3>
 
         <p>
-          Setiap peserta mendapatkan sertifikat sebagai
-          bukti kompetensi dan pengalaman belajar.
+          Setiap peserta mendapatkan sertifikat
+          sebagai bukti kompetensi dan pengalaman belajar.
         </p>
 
       </div>
@@ -950,7 +937,8 @@
 
           <p>
             Pelatihan desain grafisnya sangat mudah dipahami.
-            Saya jadi lebih percaya diri menggunakan software desain.
+            Saya jadi bisa menggunakan Photoshop dan CorelDraw
+            dengan lebih percaya diri.
           </p>
 
         </div>
@@ -964,8 +952,8 @@
           <span>Alumni Sulthan Computer</span>
 
           <p>
-            Materi Office dijelaskan dengan detail dan mudah dipahami.
-            Sangat membantu untuk dunia kerja.
+            Belajar Microsoft Office di sini sangat membantu.
+            Materi Excel dan Word dijelaskan dengan detail.
           </p>
 
         </div>
@@ -979,55 +967,13 @@
           <span>Alumni Sulthan Computer</span>
 
           <p>
-            Saya belajar coding website dari dasar sampai
-            bisa membuat project sendiri.
-          </p>
-
-        </div>
-
-        <div class="testi-card">
-
-          <h3>Siti Aulia</h3>
-
-          <div class="stars">★★★★★</div>
-
-          <span>Alumni Sulthan Computer</span>
-
-          <p>
-            Tempat kursus nyaman dan instrukturnya ramah.
-            Belajar jadi lebih menyenangkan.
+            Program RPL sangat keren. Saya belajar coding website
+            dari dasar sampai bisa membuat project sendiri.
           </p>
 
         </div>
 
       </div>
-
-    </div>
-
-  </section>
-
-  <!-- ================= HELP ================= -->
-
-  <section class="help-section" id="help">
-
-    <div class="help-content">
-
-      <h4>Butuh Bantuan?</h4>
-
-      <h2>
-        Konsultasikan Program <br>
-        yang Cocok Untuk Anda
-      </h2>
-
-      <p>
-        Tim LKP Sulthan Computer siap membantu memberikan
-        informasi pelatihan, jadwal kelas, dan konsultasi
-        program sesuai kebutuhan Anda.
-      </p>
-
-      <a href="#" class="btn">
-        Hubungi Sekarang
-      </a>
 
     </div>
 
