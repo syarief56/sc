@@ -958,7 +958,44 @@
 }
 
 /* RESPONSIVE */
+/* ================= MAP ================= */
 
+.map-box{
+  position:relative;
+  z-index:2;
+
+  margin-top:70px;
+
+  background:white;
+
+  border-radius:35px;
+
+  padding:50px;
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+
+  text-align:center;
+}
+
+.map-box h2{
+  font-size:40px;
+  color:#0f172a;
+  margin-bottom:15px;
+}
+
+.map-box p{
+  color:#475569;
+  margin-bottom:35px;
+  font-size:17px;
+}
+
+.map-frame{
+  overflow:hidden;
+
+  border-radius:25px;
+
+  border:1px solid #e2e8f0;
+}
 @media(max-width:900px){
 
   .about-top{
@@ -1973,7 +2010,30 @@ function showSection(id){
       </div>
 
     </div>
+<!-- ================= MAP LOKASI ================= -->
 
+<div class="map-box">
+
+  <h2>Lokasi LKP Sulthan Computer</h2>
+
+  <p>
+    Temukan lokasi kami dengan mudah melalui Google Maps.
+  </p>
+
+  <div class="map-frame">
+
+    <iframe
+      src="https://maps.app.goo.gl/WeGzhQXVx9X7DJqb8"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+  </div>
+
+</div>
   </section>
 
 </div>
