@@ -1352,8 +1352,14 @@
   max-height:300px;
 }
 
+.faq-question span{
+  font-size:18px;
+  color:#14b8a6;
+  transition:0.3s;
+}
+
 .faq-item.active .faq-question span{
-  transform:rotate(45deg);
+  transform:rotate(180deg);
 }
 
 /* RESPONSIVE */
@@ -1396,15 +1402,19 @@ function showSection(id){
 </script>
 <script>
 
-const faqItems = document.querySelectorAll('.faq-item');
+document.addEventListener("DOMContentLoaded", function(){
 
-faqItems.forEach(item => {
+  const faqItems = document.querySelectorAll('.faq-item');
 
-  const question = item.querySelector('.faq-question');
+  faqItems.forEach(item => {
 
-  question.addEventListener('click', () => {
+    const question = item.querySelector('.faq-question');
 
-    item.classList.toggle('active');
+    question.addEventListener('click', () => {
+
+      item.classList.toggle('active');
+
+    });
 
   });
 
