@@ -493,6 +493,185 @@
 
 }
 
+/* ================= PROGRAM HERO ================= */
+
+.program-hero{
+  width:100%;
+  height:320px;
+
+  background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400');
+  background-size:cover;
+  background-position:center;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+.program-overlay{
+  width:100%;
+  height:100%;
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  background:rgba(15,23,42,0.65);
+}
+
+.program-content{
+  position:relative;
+  z-index:5;
+
+  text-align:center;
+  color:white;
+}
+
+.program-content h1{
+  font-size:56px;
+  margin-bottom:10px;
+}
+
+.program-content p{
+  color:#cbd5e1;
+  font-size:16px;
+  letter-spacing:2px;
+}
+
+/* ================= PROGRAM SECTION ================= */
+
+.program-section{
+  padding:90px 8%;
+  background:#f8fafc;
+}
+
+.program-container{
+  display:flex;
+  justify-content:center;
+}
+
+.program-card{
+  width:100%;
+  max-width:1100px;
+
+  background:white;
+
+  border-radius:30px;
+  overflow:hidden;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.06);
+}
+
+.program-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.program-body{
+  padding:45px;
+}
+
+.program-body h3{
+  font-size:38px;
+  color:#0f172a;
+  margin-bottom:18px;
+}
+
+.program-desc{
+  color:#475569;
+  line-height:1.9;
+  font-size:16px;
+  margin-bottom:28px;
+}
+
+.price-box{
+  background:#ccfbf1;
+  padding:22px;
+  border-radius:18px;
+  margin-bottom:30px;
+}
+
+.price-box h4{
+  font-size:34px;
+  color:#0f766e;
+}
+
+.price-box span{
+  color:#134e4a;
+  font-size:15px;
+}
+
+.apps{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.app-card{
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+
+  padding:22px;
+  border-radius:18px;
+}
+
+.app-card h5{
+  font-size:22px;
+  color:#0f172a;
+  margin-bottom:10px;
+}
+
+.app-card p{
+  color:#475569;
+  line-height:1.7;
+  font-size:15px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .program-hero{
+    height:250px;
+  }
+
+  .program-content h1{
+    font-size:38px;
+  }
+
+  .program-section{
+    padding:70px 6%;
+  }
+
+  .program-card{
+    grid-template-columns:1fr;
+  }
+
+  .program-image{
+    height:280px;
+  }
+
+  .program-body{
+    padding:30px;
+  }
+
+  .program-body h3{
+    font-size:30px;
+  }
+
+  .price-box h4{
+    font-size:28px;
+  }
+
+}
   </style>
 
 </head>
@@ -508,7 +687,7 @@
 
     <ul>
       <li><a href="#">Beranda</a></li>
-      <li><a href="#">Program Conditions</a></li>
+<li><a href="#program">Program Conditions</a></li>
       <li><a href="#">Tentang Kami</a></li>
       <li><a href="#">Need Help</a></li>
       <li><a href="#">FAQ</a></li>
@@ -671,6 +850,100 @@
     </div>
 
   </section>
+
+<!-- ================= PROGRAM CONDITIONS ================= -->
+
+<section class="program-hero" id="program">
+
+  <div class="program-overlay"></div>
+
+  <div class="program-content">
+
+    <h1>Program Conditions</h1>
+
+    <p>LKP Sulthan Computer</p>
+
+  </div>
+
+</section>
+
+<!-- ================= PROGRAM LIST ================= -->
+
+<section class="program-section">
+
+  <div class="section-title">
+
+    <h4>Program Pilihan</h4>
+
+    <h2>
+      Pilih Program Pelatihan <br>
+      Sesuai Minat dan Skill
+    </h2>
+
+  </div>
+
+  <div class="program-container">
+
+    <!-- PROGRAM 1 -->
+
+    <div class="program-card">
+
+      <div class="program-image">
+
+        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200">
+
+      </div>
+
+      <div class="program-body">
+
+        <h3>Design Grafis</h3>
+
+        <p class="program-desc">
+          Mempelajari desain vector dan bitmap untuk kebutuhan
+          desain modern, promosi, branding, dan media sosial.
+        </p>
+
+        <div class="price-box">
+
+          <h4>Rp 800.000</h4>
+
+          <span>16x Pertemuan</span>
+
+        </div>
+
+        <div class="apps">
+
+          <div class="app-card">
+
+            <h5>CorelDRAW</h5>
+
+            <p>
+              Software desain vector untuk membuat logo,
+              banner, poster, dan ilustrasi profesional.
+            </p>
+
+          </div>
+
+          <div class="app-card">
+
+            <h5>Adobe Photoshop</h5>
+
+            <p>
+              Software editing bitmap untuk manipulasi foto,
+              desain konten visual, dan kebutuhan digital imaging.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 <!-- ================= TESTIMONI ================= -->
 
