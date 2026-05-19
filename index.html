@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LKP Sulthan Computer</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f5f7fa;
+      color:#1e293b;
+      overflow-x:hidden;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav{
+      width:100%;
+      background:#14b8a6;
+      padding:16px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .logo{
+      color:white;
+      font-size:28px;
+      font-weight:700;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:28px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:15px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#0f172a;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      width:100%;
+      height:520px;
+      margin-top:78px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* SLIDE GAMBAR */
+
+    .slider{
+      width:100%;
+      height:100%;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
+    .slider img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      position:absolute;
+      opacity:0;
+      animation:slideShow 16s infinite;
+    }
+
+    .slider img:nth-child(1){
+      animation-delay:0s;
+    }
+
+    .slider img:nth-child(2){
+      animation-delay:4s;
+    }
+
+    .slider img:nth-child(3){
+      animation-delay:8s;
+    }
+
+    .slider img:nth-child(4){
+      animation-delay:12s;
+    }
+
+    /* OVERLAY */
+
+    .overlay{
+      width:100%;
+      height:100%;
+      position:absolute;
+      top:0;
+      left:0;
+
+      background:linear-gradient(
+        rgba(15,23,42,0.55),
+        rgba(15,23,42,0.55)
+      );
+
+      z-index:1;
+    }
+
+    /* HERO CONTENT */
+
+    .hero-content{
+      position:relative;
+      z-index:5;
+      color:white;
+
+      height:100%;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+
+      padding:0 8%;
+    }
+
+    .hero-content h1{
+      font-size:60px;
+      line-height:1.2;
+      margin-bottom:20px;
+      max-width:700px;
+    }
+
+    .hero-content span{
+      color:#5eead4;
+    }
+
+    .hero-content p{
+      font-size:18px;
+      line-height:1.8;
+      max-width:700px;
+      color:#e2e8f0;
+    }
+
+    .btn{
+      width:fit-content;
+      margin-top:30px;
+      text-decoration:none;
+      background:#14b8a6;
+      color:white;
+      padding:14px 32px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0f766e;
+      transform:translateY(-3px);
+    }
+
+    /* ANIMASI */
+
+    @keyframes slideShow{
+
+      0%{
+        opacity:0;
+      }
+
+      5%{
+        opacity:1;
+      }
+
+      25%{
+        opacity:1;
+      }
+
+      30%{
+        opacity:0;
+      }
+
+      100%{
+        opacity:0;
+      }
+
+    }
+
+    /* ================= SECTION ================= */
+
+    .section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title h4{
+      color:#14b8a6;
+      font-size:22px;
+      margin-bottom:10px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      line-height:1.4;
+      color:#0f172a;
+    }
+
+    /* ================= CARDS ================= */
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+    }
+
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:24px;
+      border:1px solid #e2e8f0;
+
+      transition:0.3s;
+
+      box-shadow:0 8px 25px rgba(0,0,0,0.04);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+
+      box-shadow:0 15px 35px rgba(20,184,166,0.12);
+    }
+
+    .icon{
+      width:75px;
+      height:75px;
+      background:#ccfbf1;
+      border-radius:50%;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:34px;
+
+      margin-bottom:22px;
+    }
+
+    .card h3{
+      font-size:26px;
+      margin-bottom:16px;
+      color:#0f172a;
+    }
+
+    .card p{
+      color:#475569;
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:28px;
+      margin-top:50px;
+      font-size:15px;
+    }
+
+    /* ================= RESPONSIVE HP ================= */
+
+    @media(max-width:900px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+        padding:18px 5%;
+      }
+
+      .logo{
+        font-size:24px;
+      }
+
+      nav ul{
+        width:100%;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+      }
+
+      nav ul li a{
+        font-size:14px;
+      }
+
+      /* HERO */
+
+      .hero{
+        height:430px;
+        margin-top:120px;
+      }
+
+      .hero-content{
+        justify-content:flex-start;
+        padding:60px 7% 0;
+      }
+
+      .hero-content h1{
+        font-size:34px;
+        max-width:100%;
+      }
+
+      .hero-content p{
+        font-size:15px;
+        max-width:100%;
+      }
+
+      .btn{
+        padding:12px 24px;
+        font-size:14px;
+      }
+
+      /* SECTION */
+
+      .section{
+        padding:70px 6%;
+      }
+
+      .section-title h4{
+        font-size:18px;
+      }
+
+      .section-title h2{
+        font-size:28px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .card h3{
+        font-size:22px;
+      }
+
+      .card p{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav>
+
+    <div class="logo">
+      Sulthan Computer
+    </div>
+
+    <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Program Conditions</a></li>
+      <li><a href="#">Tentang Kami</a></li>
+      <li><a href="#">Need Help</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <!-- GAMBAR SLIDE -->
+
+    <div class="slider">
+
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400">
+
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400">
+
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400">
+
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400">
+
+    </div>
+
+    <!-- OVERLAY -->
+
+    <div class="overlay"></div>
+
+    <!-- TULISAN -->
+
+    <div class="hero-content">
+
+      <h1>
+        Selamat Datang di <br>
+        <span>LKP Sulthan Computer</span>
+      </h1>
+
+      <p>
+        Tempat belajar komputer modern dengan suasana nyaman,
+        desain elegan, fasilitas lengkap, dan pembelajaran
+        yang mudah dipahami untuk semua kalangan.
+      </p>
+
+      <a href="#" class="btn">
+        Mulai Belajar
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ================= SECTION ================= -->
+
+  <section class="section">
+
+    <div class="section-title">
+
+      <h4>Mengapa Memilih Kami</h4>
+
+      <h2>
+        Kursus Pelatihan Komputer <br>
+        yang Nyaman dan Profesional
+      </h2>
+
+    </div>
+
+    <div class="card-container">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+
+        <div class="icon">📘</div>
+
+        <h3>Kurikulum</h3>
+
+        <p>
+          Materi pembelajaran disusun secara bertahap,
+          modern, dan mengikuti perkembangan teknologi terbaru.
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+
+        <div class="icon">💻</div>
+
+        <h3>Fasilitas</h3>
+
+        <p>
+          Ruang belajar nyaman dengan komputer lengkap
+          dan lingkungan yang mendukung proses belajar.
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+
+        <div class="icon">📈</div>
+
+        <h3>Top Skill</h3>
+
+        <p>
+          Membantu meningkatkan hard skill dan soft skill
+          agar lebih siap menghadapi dunia kerja.
+        </p>
+
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+
+        <div class="icon">👨‍🏫</div>
+
+        <h3>Instruktur</h3>
+
+        <p>
+          Dibimbing langsung oleh pengajar berpengalaman
+          yang mudah dipahami dalam menyampaikan materi.
+        </p>
+
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="card">
+
+        <div class="icon">🎓</div>
+
+        <h3>Ribuan Alumni</h3>
+
+        <p>
+          Banyak alumni yang berhasil mengembangkan
+          kemampuan dan karir di bidang teknologi.
+        </p>
+
+      </div>
+
+      <!-- CARD 6 -->
+
+      <div class="card">
+
+        <div class="icon">🏆</div>
+
+        <h3>Bersertifikat</h3>
+
+        <p>
+          Setiap peserta mendapatkan sertifikat
+          sebagai bukti kompetensi dan pengalaman belajar.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    © 2026 LKP Sulthan Computer - All Rights Reserved
+
+  </footer>
+
+</body>
+</html>
