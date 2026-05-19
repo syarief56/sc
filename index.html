@@ -388,6 +388,16 @@
 
     /* ================= RESPONSIVE HP ================= */
 
+/* ================= PAGE SECTION ================= */
+
+.page-section{
+  display:none;
+}
+
+.page-section.active{
+  display:block;
+}
+
     @media(max-width:900px){
 
       nav{
@@ -492,6 +502,23 @@
   </style>
 
 </head>
+<script>
+
+function showSection(id){
+
+  // sembunyikan semua section
+  document.querySelectorAll('.page-section')
+    .forEach(section => {
+      section.classList.remove('active');
+    });
+
+  // tampilkan section yang dipilih
+  document.getElementById(id)
+    .classList.add('active');
+
+}
+
+</script>
 <body>
 
   <!-- ================= NAVBAR ================= -->
@@ -502,19 +529,31 @@
       Sulthan Computer
     </div>
 
-    <ul>
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Program Conditions</a></li>
-      <li><a href="#">Tentang Kami</a></li>
-      <li><a href="#">Need Help</a></li>
-      <li><a href="#">FAQ</a></li>
-    </ul>
+<ul>
+  <li><a href="#" onclick="showSection('beranda')">Beranda</a></li>
+
+  <li><a href="#" onclick="showSection('program')">
+    Program Conditions
+  </a></li>
+
+  <li><a href="#" onclick="showSection('tentang')">
+    Tentang Kami
+  </a></li>
+
+  <li><a href="#" onclick="showSection('help')">
+    Need Help
+  </a></li>
+
+  <li><a href="#" onclick="showSection('faq')">
+    FAQ
+  </a></li>
+</ul>
 
   </nav>
 
   <!-- ================= HERO ================= -->
 
-  <section class="hero">
+<div id="beranda" class="page-section active">
 
     <!-- GAMBAR SLIDE -->
 
@@ -829,6 +868,40 @@
     </div>
 
   </section>
+  </div>
+
+  <!-- ================= PROGRAM ================= -->
+
+<div id="program" class="page-section">
+
+  <section class="section">
+
+    <div class="section-title">
+
+      <h4>Program Pelatihan</h4>
+
+      <h2>
+        Program Conditions
+      </h2>
+
+    </div>
+
+    <p style="
+      text-align:center;
+      font-size:18px;
+      line-height:1.8;
+      max-width:800px;
+      margin:auto;
+      color:#475569;
+    ">
+      Isi program pelatihan di sini.
+      Ketika menu Program Conditions diklik,
+      maka halaman beranda otomatis disembunyikan.
+    </p>
+
+  </section>
+
+</div>
 
   <!-- ================= FOOTER ================= -->
 
