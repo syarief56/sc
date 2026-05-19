@@ -712,6 +712,219 @@
   </style>
 
 </head>
+/* ================= ABOUT ================= */
+
+.about-hero{
+  position:relative;
+  padding:140px 8% 100px;
+  overflow:hidden;
+  background:#0f172a;
+}
+
+.about-hero::before{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400');
+
+  background-size:cover;
+  background-position:center;
+
+  opacity:0.12;
+}
+
+.about-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(15,23,42,0.95),
+    rgba(15,23,42,0.92)
+  );
+}
+
+.about-top{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:60px;
+
+  align-items:center;
+
+  margin-bottom:80px;
+}
+
+.about-title h1{
+  font-size:64px;
+  color:white;
+  line-height:1.2;
+}
+
+.about-desc{
+  border-left:3px solid #14b8a6;
+  padding-left:30px;
+}
+
+.about-desc p{
+  color:#e2e8f0;
+  line-height:2;
+  margin-bottom:20px;
+  font-size:17px;
+}
+
+/* GRID */
+
+.about-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+
+  margin-bottom:80px;
+}
+
+.about-card{
+  background:rgba(255,255,255,0.05);
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:28px;
+
+  padding:35px;
+
+  transition:0.3s;
+}
+
+.about-card:hover{
+  transform:translateY(-10px);
+
+  border-color:#14b8a6;
+
+  box-shadow:0 20px 40px rgba(20,184,166,0.15);
+}
+
+.about-icon{
+  width:70px;
+  height:70px;
+
+  border-radius:50%;
+
+  background:#14b8a6;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:30px;
+
+  margin-bottom:25px;
+}
+
+.about-card h3{
+  color:white;
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+.about-card p{
+  color:#cbd5e1;
+  line-height:1.9;
+  font-size:15px;
+}
+
+/* INFO */
+
+.info-box{
+  position:relative;
+  z-index:2;
+
+  background:white;
+
+  border-radius:35px;
+
+  padding:50px;
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.info-box h2{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:40px;
+  color:#0f172a;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.info-grid div{
+  background:#f8fafc;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  border:1px solid #e2e8f0;
+}
+
+.info-grid span{
+  display:block;
+
+  font-size:14px;
+  color:#14b8a6;
+
+  margin-bottom:10px;
+
+  font-weight:600;
+}
+
+.info-grid p{
+  color:#0f172a;
+  line-height:1.8;
+  font-weight:500;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .about-top{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .about-title h1{
+    font-size:42px;
+  }
+
+  .about-desc{
+    padding-left:20px;
+  }
+
+  .info-box{
+    padding:30px 22px;
+  }
+
+  .info-box h2{
+    font-size:30px;
+  }
+
+}
 <script>
 
 function showSection(id){
@@ -1306,6 +1519,148 @@ function showSection(id){
 <!-- ================= TENTANG KAMI ================= -->
 
 <div id="tentang" class="page-section">
+
+  <!-- HERO TENTANG -->
+
+  <section class="about-hero">
+
+    <div class="about-overlay"></div>
+
+    <div class="about-top">
+
+      <div class="about-title">
+        <h1>Tentang Kami</h1>
+      </div>
+
+      <div class="about-desc">
+
+        <p>
+          <b>LKP SULTHAN COMPUTER</b> merupakan lembaga kursus dan pelatihan
+          komputer yang berdiri sejak <b>22 Februari 2018</b> dan berlokasi di
+          Bondowoso, Jawa Timur. Kami hadir sebagai lembaga pendidikan non formal
+          yang membantu masyarakat meningkatkan keterampilan di bidang teknologi,
+          komputer, dan digital untuk menghadapi dunia kerja modern.
+        </p>
+
+        <p>
+          Dengan program pembelajaran berbasis KKNI Level 2, Level 3, dan Level 4,
+          kami berkomitmen menciptakan peserta didik yang siap kerja,
+          terampil, kreatif, dan mampu bersaing di era digital.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- BOX -->
+
+    <div class="about-grid">
+
+      <!-- LATAR BELAKANG -->
+
+      <div class="about-card">
+
+        <div class="about-icon">🏫</div>
+
+        <h3>Latar Belakang</h3>
+
+        <p>
+          Berawal dari kebutuhan masyarakat terhadap pendidikan komputer
+          yang mudah diakses dan berkualitas, LKP Sulthan Computer hadir
+          untuk membantu pelajar, mahasiswa, dan masyarakat umum dalam
+          meningkatkan kemampuan teknologi serta keterampilan kerja.
+        </p>
+
+      </div>
+
+      <!-- VISI -->
+
+      <div class="about-card">
+
+        <div class="about-icon">🎯</div>
+
+        <h3>Visi</h3>
+
+        <p>
+          Menjadi lembaga kursus dan pelatihan komputer yang unggul,
+          profesional, modern, dan mampu mencetak sumber daya manusia
+          yang kompeten, mandiri, serta siap menghadapi perkembangan teknologi.
+        </p>
+
+      </div>
+
+      <!-- MISI -->
+
+      <div class="about-card">
+
+        <div class="about-icon">🚀</div>
+
+        <h3>Misi</h3>
+
+        <p>
+          Menyediakan pembelajaran komputer yang berkualitas,
+          meningkatkan keterampilan peserta didik,
+          membangun karakter disiplin dan kreatif,
+          serta memberikan pelatihan yang sesuai kebutuhan dunia kerja.
+        </p>
+
+      </div>
+
+      <!-- SEJARAH -->
+
+      <div class="about-card">
+
+        <div class="about-icon">📖</div>
+
+        <h3>Sejarah</h3>
+
+        <p>
+          LKP Sulthan Computer didirikan pada tanggal 22 Februari 2018
+          sebagai lembaga pendidikan non formal di Kabupaten Bondowoso.
+          Sejak berdiri, lembaga terus berkembang dan aktif memberikan
+          pelatihan komputer bagi masyarakat umum dan pelajar.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- INFO LEMBAGA -->
+
+    <div class="info-box">
+
+      <h2>Informasi Lembaga</h2>
+
+      <div class="info-grid">
+
+        <div><span>Nama</span><p>LKP SULTHAN COMPUTER</p></div>
+
+        <div><span>NPSN</span><p>K5668883</p></div>
+
+        <div><span>Bentuk Pendidikan</span><p>Kursus</p></div>
+
+        <div><span>Jenjang Pendidikan</span><p>DIKMAS</p></div>
+
+        <div><span>Program</span><p>KKNI Level 2, 3, dan 4</p></div>
+
+        <div><span>Tanggal Berdiri</span><p>22 Februari 2018</p></div>
+
+        <div class="full">
+          <span>Alamat</span>
+          <p>
+            JL. LETNAN RANTAM RT.16 RW.04 Desa Poncogati,
+            Kecamatan Curahdami, Kabupaten Bondowoso,
+            Provinsi Jawa Timur
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
 
   <!-- HERO -->
 
