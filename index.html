@@ -921,6 +921,133 @@
   }
 
 }
+/* ================= NEED HELP ================= */
+
+.help-section{
+  position:relative;
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:120px 8%;
+
+  overflow:hidden;
+
+  background:#0f172a;
+}
+
+.help-section::before{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400');
+
+  background-size:cover;
+  background-position:center;
+
+  opacity:0.18;
+}
+
+.help-overlay{
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    rgba(15,23,42,0.9),
+    rgba(15,23,42,0.92)
+  );
+}
+
+.help-content{
+  position:relative;
+  z-index:2;
+
+  max-width:850px;
+
+  text-align:center;
+
+  color:white;
+}
+
+.help-content h1{
+  font-size:68px;
+  margin-bottom:25px;
+  line-height:1.2;
+}
+
+.help-content p{
+  font-size:18px;
+  line-height:2;
+  color:#cbd5e1;
+  margin-bottom:18px;
+}
+
+.help-text{
+  margin-bottom:40px;
+}
+
+.help-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.help-btn{
+  text-decoration:none;
+
+  background:#14b8a6;
+  color:white;
+
+  padding:16px 34px;
+
+  border-radius:50px;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+.help-btn:hover{
+  background:#0f766e;
+  transform:translateY(-4px);
+}
+
+.secondary-btn{
+  background:transparent;
+  border:2px solid #14b8a6;
+}
+
+.secondary-btn:hover{
+  background:#14b8a6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .help-section{
+    padding:120px 6%;
+  }
+
+  .help-content h1{
+    font-size:42px;
+  }
+
+  .help-content p{
+    font-size:16px;
+  }
+
+  .help-btn{
+    width:100%;
+  }
+
+}
   </style>
 
 </head>
@@ -1678,7 +1805,46 @@ function showSection(id){
 
 </div>
 
+<!-- ================= NEED HELP ================= -->
 
+<div id="help" class="page-section">
+
+  <section class="help-section">
+
+    <div class="help-overlay"></div>
+
+    <div class="help-content">
+
+      <h1>Need Help?</h1>
+
+      <p>
+        Kami siap membantu Anda mendapatkan informasi
+        seputar program kursus, jadwal belajar,
+        biaya pelatihan, dan pendaftaran peserta baru.
+      </p>
+
+      <p class="help-text">
+        Jangan ragu untuk menghubungi LKP Sulthan Computer
+        jika Anda memiliki pertanyaan atau membutuhkan bantuan.
+      </p>
+
+      <div class="help-buttons">
+
+        <a href="#" class="help-btn">
+          Hubungi Admin
+        </a>
+
+        <a href="#" class="help-btn secondary-btn">
+          Lihat Program
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
 
   <!-- ================= FOOTER ================= -->
 
