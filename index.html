@@ -1258,7 +1258,122 @@
 
   z-index:-1;
 }
+/* ================= FAQ ================= */
 
+.faq-section{
+  padding:100px 8%;
+  background:#0f172a;
+  color:white;
+}
+
+.faq-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.faq-title h4{
+  color:#14b8a6;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.faq-title h2{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.faq-title p{
+  color:#cbd5e1;
+  font-size:17px;
+}
+
+.faq-container{
+  max-width:950px;
+  margin:auto;
+}
+
+.faq-item{
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  border-radius:22px;
+
+  margin-bottom:22px;
+
+  overflow:hidden;
+}
+
+.faq-question{
+  width:100%;
+
+  background:none;
+  border:none;
+
+  color:white;
+
+  padding:26px 30px;
+
+  font-size:18px;
+  font-weight:600;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  cursor:pointer;
+}
+
+.faq-question span{
+  font-size:26px;
+  color:#14b8a6;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+
+  transition:0.4s ease;
+
+  padding:0 30px;
+}
+
+.faq-answer p{
+  padding-bottom:28px;
+
+  color:#cbd5e1;
+  line-height:1.9;
+  font-size:16px;
+}
+
+/* ACTIVE */
+
+.faq-item.active .faq-answer{
+  max-height:300px;
+}
+
+.faq-item.active .faq-question span{
+  transform:rotate(45deg);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .faq-section{
+    padding:80px 6%;
+  }
+
+  .faq-title h2{
+    font-size:30px;
+  }
+
+  .faq-question{
+    font-size:16px;
+    padding:22px;
+  }
+
+}
   </style>
 
 </head>
@@ -1277,6 +1392,23 @@ function showSection(id){
     .classList.add('active');
 
 }
+
+</script>
+<script>
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+  const question = item.querySelector('.faq-question');
+
+  question.addEventListener('click', () => {
+
+    item.classList.toggle('active');
+
+  });
+
+});
 
 </script>
 <body>
@@ -2165,6 +2297,200 @@ function showSection(id){
 
 </div>
 
+<!-- ================= FAQ ================= -->
+
+<div id="faq" class="page-section">
+
+  <section class="faq-section">
+
+    <div class="faq-title">
+
+      <h4>Pertanyaan Umum</h4>
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+      <p>
+        Beberapa pertanyaan yang sering ditanyakan
+        seputar kursus di LKP Sulthan Computer.
+      </p>
+
+    </div>
+
+    <div class="faq-container">
+
+      <!-- FAQ 1 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Berapa biaya kursus di Sulthan Computer?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Biaya kursus menyesuaikan dengan program
+            yang dipilih seperti Design Grafis,
+            Microsoft Office, maupun RPL.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Apakah pemula bisa ikut belajar?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Tentu bisa. Materi pembelajaran dimulai
+            dari dasar sehingga mudah dipahami
+            oleh pemula sekalipun.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Kapan kelas mulai dilaksanakan?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Jadwal kelas dapat dimulai setelah proses
+            pendaftaran selesai dan disesuaikan
+            dengan jadwal belajar peserta.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Apakah mendapatkan sertifikat?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Ya, peserta akan mendapatkan sertifikat
+            resmi setelah menyelesaikan program
+            pelatihan sesuai ketentuan.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Berapa lama masa belajar kursus?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Lama belajar tergantung program yang diambil,
+            rata-rata dimulai dari 12 sampai 20 pertemuan.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 6 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Apakah bisa belajar private?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Bisa. Tersedia kelas private dengan jadwal
+            yang lebih fleksibel sesuai kebutuhan peserta.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 7 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Apakah tersedia kelas online?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Beberapa program tersedia dalam sistem
+            pembelajaran online maupun offline
+            sesuai kondisi dan kebutuhan siswa.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ 8 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Apakah setelah kursus bisa langsung kerja?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Skill yang dipelajari dirancang untuk
+            kebutuhan dunia kerja sehingga peserta
+            memiliki kemampuan yang lebih siap digunakan.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
   <!-- ================= FOOTER ================= -->
 
   <footer>
