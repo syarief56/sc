@@ -1048,14 +1048,30 @@
   }
 
 }
-/* ================= TENTANG HERO ================= */
+.about-hero::before{
+  content:'';
 
-.tentang-hero::before{
+  position:absolute;
+  inset:0;
+
   background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400');
 
   background-size:cover;
   background-position:center;
+
+  opacity:0.12;
 }
+.program-hero::after{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:rgba(15,23,42,0.65);
+
+  z-index:-1;
+}
+
   </style>
 
 </head>
