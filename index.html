@@ -708,16 +708,25 @@
       }
 
     }
-/* ================= ABOUT ================= */
+    /* ================= HERO TENTANG ================= */
 
-.about-hero{
+.tentang-hero{
+  width:100%;
+  height:420px;
+
+  margin-top:78px;
+  margin-bottom:50px;
+
   position:relative;
-  padding:140px 8% 100px;
+
+  border-radius:0 0 35px 35px;
+
   overflow:hidden;
-  background:#0f172a;
+
+  isolation:isolate;
 }
 
-.about-hero::before{
+.tentang-hero::before{
   content:'';
 
   position:absolute;
@@ -728,6 +737,59 @@
   background-size:cover;
   background-position:center;
 
+  z-index:-2;
+}
+
+.tentang-hero::after{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:rgba(15,23,42,0.7);
+
+  z-index:-1;
+}
+
+.tentang-content{
+  position:relative;
+  z-index:5;
+
+  height:100%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+  color:white;
+}
+
+.tentang-content h1{
+  font-size:60px;
+  margin-bottom:12px;
+}
+
+.tentang-content p{
+  font-size:18px;
+  color:#cbd5e1;
+  letter-spacing:2px;
+}
+/* ================= ABOUT ================= */
+
+.about-hero{
+  position:relative;
+  padding:80px 8% 100px;
+  overflow:hidden;
+  background:#0f172a;
+}
+
+.about-hero::before{
+  content:'';
+
+  position:absolute;
+  inset:0;
   opacity:0.12;
 }
 
@@ -1672,6 +1734,19 @@ function showSection(id){
 
 
 <div id="tentang" class="page-section">
+  <!-- HERO TENTANG -->
+
+<section class="tentang-hero">
+
+  <div class="tentang-content">
+
+    <h1>Tentang Kami</h1>
+
+    <p>LKP Sulthan Computer</p>
+
+  </div>
+
+</section>
 
   <!-- HERO TENTANG -->
 
